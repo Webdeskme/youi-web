@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Direct Games &#8212; YOUi 0.01 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Standard Games" href="standard_games.html" />
+    <link rel="prev" title="File Based Games" href="file_games.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="direct-games">
+<h1>Direct Games<a class="headerlink" href="#direct-games" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Direct games are games that take place on the users controler (ie: phone, tablet, comupter) instead of the screen</p></li>
+<li><p>Direct games do not use YOUi’s controler, but instead use the native inputs provided by the players devise</p></li>
+<li><p>Direct games is a great way to use engines built for standard html games</p></li>
+<li><p>You can also setup your direct game to work with the main screen were the player uses there device as a custom controller. In this way you can make an even more emersive experince then a standard YOUi game.</p></li>
+</ul>
+<section id="starting-script">
+<h2>Starting Script<a class="headerlink" href="#starting-script" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>To start your game you must include a seprate index.html and index.js that does not inclued you game and looks something like this.</p></li>
+</ul>
+<p>index.html</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>&lt;!DOCTYPE html&gt;
+<span class="linenos"> 2</span>&lt;html&gt;
+<span class="linenos"> 3</span>  &lt;head&gt;
+<span class="linenos"> 4</span>    &lt;title&gt;Direct Connect&lt;/title&gt;
+<span class="linenos"> 5</span>    &lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
+<span class="linenos"> 6</span>  &lt;/head&gt;
+<span class="linenos"> 7</span>  &lt;body&gt;
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    &lt;h1&gt;Direct Connect&lt;/h1&gt;
+<span class="linenos">10</span>    &lt;p&gt;To your player one controler&lt;/p&gt;
+<span class="linenos">11</span>    &lt;h2&gt;Your game will start in seconds&lt;/h2&gt;
+<span class="linenos">12</span>    &lt;script src=&quot;index.js&quot;&gt;&lt;/script&gt;
+<span class="linenos">13</span>  &lt;/body&gt;
+<span class="linenos">14</span>&lt;/html&gt;
+</pre></div>
+</div>
+<p>index.js</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">const</span> <span class="nx">socket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">();</span>
+<span class="linenos">2</span><span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;direct&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/game/index.html&#39;</span><span class="p">);</span>
+<span class="linenos">3</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos">4</span>  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;/photo.html?title=game.jpg&amp;sec=card&#39;</span><span class="p">;</span>
+<span class="linenos">5</span>  <span class="c1">// The above code will display a photo you provide on the primary screen while the players play your game on their own devices</span>
+<span class="linenos">6</span>  <span class="c1">// The title varable gives the file path to your games photo.</span>
+<span class="linenos">7</span>  <span class="c1">// You can also add text on your photo by adding a txt file with the same filename as your photo</span>
+<span class="linenos">8</span>  <span class="c1">// The photo can be a .png, .jpg, .jpeg, .gif</span>
+<span class="linenos">9</span> <span class="p">},</span> <span class="mf">100</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>It is a good idea to add a QR code in the picture to be displayd on the primary screen so other players can play your game too</p></li>
+<li><p>Only the first player will be automatically directed to you game on their controller</p></li>
+<li><p>If the redirect fails it is a good idea to have a QR code to allow them to try again.</p></li>
+</ul>
+</section>
+<section id="socket-io">
+<h2>Socket.io<a class="headerlink" href="#socket-io" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Socket.io is installed on the YOUi system and can be used for local online multiplayer as well as for giving sertain comainds to your game</p></li>
+<li><p>If you include the javascript files listed below in “YOUi Integration” You can use the 18 sockets opened up for you for your game by the YOUi system</p></li>
+<li><p>These sockets are general purpose and can be used at your own discretion or not at all.</p></li>
+<li><p>There are 6 sockets for each player to talk to the primary screen. These are: loc_screen1, loc_screen2, loc_screen3, loc_screen4, loc_screen5, loc_screen6</p></li>
+<li><p>There are 6 sockets to call to all players, but not the screen. These are loc1, loc2, loc3, loc4, loc5, loc6</p></li>
+<li><p>There are 6 socket to call each player indiviually. loc_p1 calls player1, loc_p2, calls player 2, loc_p3 calls player 3, loc_p4 calls player 4, loc_p5 calls player 5, loc_p6 calls player 6</p></li>
+<li><p>Each player is assined their own socket group when they connect there controller if they have connected there controller properly before fallowing the url to your game</p></li>
+<li><p>Calling a local socket looks like this: <code class="docutils literal notranslate"><span class="pre">socket.emit('loc1',</span> <span class="pre">'Something_happend!');</span></code></p></li>
+<li><p>Session or local storage can be used for your game or game saves if you want to save to the users device.</p></li>
+<li><p>Saving will not work on the main file system however because the it is set to read only and no changes are perminet</p></li>
+</ul>
+</section>
+<section id="youi-integration">
+<h2>YOUi Integration<a class="headerlink" href="#youi-integration" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>There are a few difrent ways to integrate your direct game with the rest of the YOUi system</p></li>
+<li><p>You can provide a link to allow the player to easily get back to their YOUi controller <code class="docutils literal notranslate"><span class="pre">/control.html</span></code></p></li>
+<li><p>Using socket.io and the tin function <code class="docutils literal notranslate"><span class="pre">socket.emit('tin',</span> <span class="pre">[filename,</span> <span class="pre">'card']);</span></code> you can change what the player sees on the main screen while they are playing your game. This can greatly anhance your game and the players experience</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Filename</span></code> would be changed to the filename on you ame card that you would wish to be displayed on the screen.</p></li>
+<li><p>In order to use the tin function, you must inclued all the scripts required in a standard game as seen in the “Standard Games” section</p></li>
+<li><p>These files whould inclued <code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;&lt;script</span> <span class="pre">src=&quot;NoSleep.js&quot;&gt;&lt;/sript&gt;&lt;script</span> <span class="pre">src=&quot;emulsion.js&quot;&gt;&lt;/script&gt;</span></code></p></li>
+<li><p>You also should include this script in your main js file:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">function</span> <span class="nx">em_tinv</span><span class="p">(</span><span class="nx">msg</span><span class="p">){}</span>
+<span class="linenos">2</span><span class="c1">// This code is use to capture magic spells from the players controller and will cause errors if it is not inclueded in your file.</span>
+<span class="linenos">3</span><span class="c1">// It also can be used to recieve inputs from the bar code scanner built into the YOUi system</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">YOUi</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="file_games.html">File Based Games</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Direct Games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#starting-script">Starting Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#socket-io">Socket.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#youi-integration">YOUi Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standard_games.html">Standard Games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movies.html">Movies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_playlists.html">Audio Playlists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_tools.html">Dev Tools</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="file_games.html" title="previous chapter">File Based Games</a></li>
+      <li>Next: <a href="standard_games.html" title="next chapter">Standard Games</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2024, Adam W. Telford.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/direct_games.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

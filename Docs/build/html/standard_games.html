@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Standard Games &#8212; YOUi 0.01 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Movies" href="movies.html" />
+    <link rel="prev" title="Direct Games" href="direct_games.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="standard-games">
+<h1>Standard Games<a class="headerlink" href="#standard-games" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Standard Games take advantage of the YOUi game system more so then any other game type.</p></li>
+<li><p>These games are played on the primary screen and use the YOUi controller for player input.</p></li>
+<li><p>These games can be made with custom or improvised code or with a game engine like phaser.io</p></li>
+<li><p>File Based Games are a simplified version of standard games that also use the YOUi controller</p></li>
+<li><p>You can also buld Standard YOUi games with some of our dev tools surch as “The board game builder”, “The Platform Buider”, “The side scroll Shooter Builder”, “And the Top Down Adventure builder”</p></li>
+</ul>
+<section id="the-controls">
+<h2>The controls<a class="headerlink" href="#the-controls" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>To use the controller in your game you will need to listen for certain variable changes.</p></li>
+<li><p>When a button is pressed it variable will change from being equal to zero to being equal to one.</p></li>
+<li><p>The controller can take multiple inputs at the same time as long as the players device allows for that.</p></li>
+<li><p>Here is a list of the veriable set to there not pressed state.</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">//p1</span>
+<span class="linenos"> 2</span><span class="nx">em_av</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="c1">// play button</span>
+<span class="linenos"> 3</span><span class="nx">em_bv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="c1">// forward button</span>
+<span class="linenos"> 4</span><span class="nx">em_xv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="c1">// rewind button</span>
+<span class="linenos"> 5</span><span class="nx">em_yv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="c1">// pause button</span>
+<span class="linenos"> 6</span><span class="nx">em_rightv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="c1">// right arrow button</span>
+<span class="linenos"> 7</span><span class="nx">em_leftv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="c1">// left arrow button</span>
+<span class="linenos"> 8</span><span class="nx">em_upv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>  <span class="c1">// up arrow button</span>
+<span class="linenos"> 9</span><span class="nx">em_downv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>  <span class="c1">// down arrow button</span>
+<span class="linenos">10</span><span class="c1">//p2</span>
+<span class="linenos">11</span><span class="nx">em_av2</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">12</span><span class="nx">em_bv2</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">13</span><span class="nx">em_xv2</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">14</span><span class="nx">em_yv2</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">15</span><span class="nx">em_rightv2</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">16</span><span class="nx">em_leftv2</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">17</span><span class="nx">em_upv2</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">18</span><span class="nx">em_downv2</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">19</span><span class="c1">//p3</span>
+<span class="linenos">20</span><span class="nx">em_av3</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">21</span><span class="nx">em_bv3</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">22</span><span class="nx">em_xv3</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">23</span><span class="nx">em_yv3</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">24</span><span class="nx">em_rightv3</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">25</span><span class="nx">em_leftv3</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">26</span><span class="nx">em_upv3</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">27</span><span class="nx">em_downv3</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">28</span><span class="c1">//p4</span>
+<span class="linenos">29</span><span class="nx">em_av4</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">30</span><span class="nx">em_bv4</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">31</span><span class="nx">em_xv4</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">32</span><span class="nx">em_yv4</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">33</span><span class="nx">em_rightv4</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">34</span><span class="nx">em_leftv4</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">35</span><span class="nx">em_upv4</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">36</span><span class="nx">em_downv4</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">37</span><span class="c1">//p5</span>
+<span class="linenos">38</span><span class="nx">em_av5</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">39</span><span class="nx">em_bv5</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">40</span><span class="nx">em_xv5</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">41</span><span class="nx">em_yv5</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">42</span><span class="nx">em_rightv5</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">43</span><span class="nx">em_leftv5</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">44</span><span class="nx">em_upv5</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">45</span><span class="nx">em_downv5</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">46</span><span class="c1">//p6</span>
+<span class="linenos">47</span><span class="nx">em_av6</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">48</span><span class="nx">em_bv6</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">49</span><span class="nx">em_xv6</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">50</span><span class="nx">em_yv6</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">51</span><span class="nx">em_rightv6</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">52</span><span class="nx">em_leftv6</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">53</span><span class="nx">em_upv6</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">54</span><span class="nx">em_downv6</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="linenos">55</span><span class="c1">//the rest</span>
+<span class="linenos">56</span><span class="nx">em_selectv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>  <span class="c1">// select button (usually used as a back to the previus page button)</span>
+<span class="linenos">57</span><span class="nx">em_startv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>  <span class="c1">// start button</span>
+<span class="linenos">58</span><span class="nx">em_homev</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>  <span class="c1">// home button (used to get the player back to the home screen)</span>
+<span class="linenos">59</span><span class="nx">em_lbv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>  <span class="c1">// In the top right. To the right of the puzzle button. The left arrow usually used for volume down</span>
+<span class="linenos">60</span><span class="nx">em_rbv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>  <span class="c1">// right arrow in the top right usually used for volume up</span>
+<span class="linenos">61</span><span class="nx">em_powerv</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>  <span class="c1">// power button (usually used to resset the screen or the game)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If you click the YOUi logo on the top of the contrller it will open chat.</p></li>
+<li><p>If you click the dice at the top middle they will roll</p></li>
+<li><p>the dice to the right of the word player will indicate what controller number the player has</p></li>
+<li><p>If you click the word “Player” in the top right it will open up the help menu and documentation</p></li>
+<li><p>If you click the words “Magic Spell” in the buttom middle it will open a text box for players to type. This works in the same way as the bar code scanner but with words</p></li>
+</ul>
+</section>
+<section id="magic-spells">
+<h2>Magic Spells<a class="headerlink" href="#magic-spells" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>You can refer to a file name you want the player to have the option to go to</p></li>
+<li><p>Players can type the file name in the “Magic Spell” sectionof there controller and it will take them to that file</p></li>
+</ul>
+</section>
+<section id="chat">
+<h2>Chat<a class="headerlink" href="#chat" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Chat can be reached by pressing the YOUi logo</p></li>
+<li><p>There are two inputs given in the chat. The first is the group. Because the chat will be used in games you wil not want everyone in the same chat. Come up with a group secret code and type it in. Participents can see every chat posted after they have logged in.</p></li>
+<li><p>The second input is were you type you mesage</p></li>
+</ul>
+</section>
+<section id="socket-io">
+<h2>Socket.io<a class="headerlink" href="#socket-io" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Socket.io is installed on the YOUi system and can be used for local online multiplayer as well as for giving sertain comainds to your game</p></li>
+<li><p>If you include the javascript files listed below in “YOUi Integration” You can use the 18 sockets opened up for you for your game by the YOUi system</p></li>
+<li><p>These sockets are general purpose and can be used at your own discretion or not at all.</p></li>
+<li><p>There are 6 sockets for each player to talk to the primary screen. These are: loc_screen1, loc_screen2, loc_screen3, loc_screen4, loc_screen5, loc_screen6</p></li>
+<li><p>There are 6 sockets to call to all players, but not the screen. These are loc1, loc2, loc3, loc4, loc5, loc6</p></li>
+<li><p>There are 6 socket to call each player indiviually. loc_p1 calls player1, loc_p2, calls player 2, loc_p3 calls player 3, loc_p4 calls player 4, loc_p5 calls player 5, loc_p6 calls player 6</p></li>
+<li><p>Each player is assined their own socket group when they connect there controller if they have connected there controller properly before fallowing the url to your game</p></li>
+<li><p>Calling a local socket looks like this: <code class="docutils literal notranslate"><span class="pre">socket.emit('loc1',</span> <span class="pre">'Something_happend!');</span></code></p></li>
+<li><p>Session or local storage can be used for your game or game saves if you want to save to the users device.</p></li>
+<li><p>Saving will not work on the main file system however because the it is set to read only and no changes are perminet</p></li>
+</ul>
+</section>
+<section id="youi-integration">
+<h2>YOUi Integration<a class="headerlink" href="#youi-integration" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Using socket.io and the tin function <code class="docutils literal notranslate"><span class="pre">socket.emit('tin',</span> <span class="pre">[filename,</span> <span class="pre">'card']);</span></code> you can change what the player sees on the main screen while they are playing your game. This can greatly anhance &gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Filename</span></code> would be changed to the filename on you ame card that you would wish to be displayed on the screen.</p></li>
+<li><p>These files need to be inclueded in all your html documents and in this order: <code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;&lt;script</span> <span class="pre">src=&quot;NoSleep.js&quot;&gt;&lt;/sript&gt;&lt;script</span> <span class="pre">src=&quot;emulsion.js&quot;&gt;&lt;/script&gt;</span></code></p></li>
+<li><p>You also should include this script in your main js file:</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">function</span> <span class="nx">em_tinv</span><span class="p">(</span><span class="nx">msg</span><span class="p">){}</span>
+<span class="linenos">2</span><span class="c1">// This code is use to capture magic spells from the players controller and will cause errors if it is not inclueded in your file.</span>
+<span class="linenos">3</span><span class="c1">// It also can be used to recieve inputs from the bar code scanner built into the YOUi system</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Take advantage of the “File Based Games” files as small components of your custom project if they fit in. That can save you some development time and effort.</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">YOUi</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="file_games.html">File Based Games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="direct_games.html">Direct Games</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Standard Games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-controls">The controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magic-spells">Magic Spells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chat">Chat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#socket-io">Socket.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#youi-integration">YOUi Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="movies.html">Movies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_playlists.html">Audio Playlists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_tools.html">Dev Tools</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="direct_games.html" title="previous chapter">Direct Games</a></li>
+      <li>Next: <a href="movies.html" title="next chapter">Movies</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2024, Adam W. Telford.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/standard_games.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

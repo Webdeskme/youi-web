@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>File Based Games &#8212; YOUi 0.01 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Direct Games" href="direct_games.html" />
+    <link rel="prev" title="Welcome to YOUi Dev’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="file-based-games">
+<h1>File Based Games<a class="headerlink" href="#file-based-games" title="Permalink to this headline">¶</a></h1>
+<p>File games are made by layering text files with pictures, music, and video. Layering is acomplished by giving each file the same name in adition to its correct extention. For example a music file can share the same name as a picture file and a text file. Like this: test.mp3, test.png, test.txt, test.choice. You can stringing together these files with choise, answer, or puzzle files will allow you to make a complete game. All files should be saved to an empty sd card. The game can be played by loading the sd card into the system while it is off and turning the system on. Then all you should have to do is connect one sontroller and the game should begin. If it does not make sure your first file that you want to show is called index.</p>
+<section id="text-file">
+<h2>Text File<a class="headerlink" href="#text-file" title="Permalink to this headline">¶</a></h2>
+<p>This is the simplist type of file.</p>
+<ul class="simple">
+<li><p>To create this file make the file name all lowercase</p></li>
+<li><p>The file name will be used by other docs in your game to refrence it.</p></li>
+<li><p>Players will also be able to jump to this page by typing the file name without the extention in the “magic spell” section of their controller</p></li>
+<li><p>Have it end with the file extention .txt</p></li>
+<li><p>Text file can either be writen in plain text or html</p></li>
+<li><p>Text files can be used on there own or with any other file except video</p></li>
+<li><p>Displays in a white font over a black background</p></li>
+<li><p>If Displayed with a picture it will display in fron with a transparent black background in front of the picture.</p></li>
+</ul>
+</section>
+<section id="picture-file">
+<h2>Picture File<a class="headerlink" href="#picture-file" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Pictures can have the extension of either .png, .jpeg, .jpg, .png</p></li>
+<li><p>Pictures can be blended with every file type but video</p></li>
+<li><p>Pictures will display at 100% width</p></li>
+<li><p>Text and music decorations will display in front of the picture if used with the picture.</p></li>
+</ul>
+</section>
+<section id="music-file">
+<h2>Music File<a class="headerlink" href="#music-file" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Music only displays with the extentions of .mp3</p></li>
+<li><p>Music will display decritive bars that go with the music</p></li>
+<li><p>Music can be played with all files except video</p></li>
+<li><p>In the media player, after the file is done playing it will begin playing a random file in the same folder</p></li>
+</ul>
+</section>
+<section id="video-file">
+<h2>Video File<a class="headerlink" href="#video-file" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Videos size is based on the videos resolution</p></li>
+<li><p>.mp4 is the only file extention excepted by the video file.</p></li>
+<li><p>Video file are compatable with all other file types except pictures, music, and texts</p></li>
+<li><p>In the media player, after the file is done playing it will begin playing a random file in the same folder</p></li>
+</ul>
+</section>
+<section id="html-file">
+<h2>HTML File<a class="headerlink" href="#html-file" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>More indepth information on using HTML files can be found primarily in “Standard Games” section as well as the “Direct Games” section</p></li>
+<li><p>HTML cannot be paired with any other file. HTML files work like usual so they can be paired with javascript and CSS files</p></li>
+<li><p>HTML file must inclued the required javascript files in this order: <code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;&lt;script</span> <span class="pre">src=&quot;NoSleep.js&quot;&gt;&lt;/script&gt;&lt;script</span> <span class="pre">src=&quot;emulsion.js&gt;&lt;/script&gt;&quot;</span></code></p></li>
+<li><p>The HTML file should also be paired with a javascript file with this code.</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">function</span> <span class="nx">em_tinv</span><span class="p">(</span><span class="nx">msg</span><span class="p">){}</span>
+<span class="linenos">2</span><span class="c1">// This code is use to capture magic spells from the players controller and will cause errors if it is not inclueded in your file.</span>
+<span class="linenos">3</span><span class="c1">// It also can be used to recieve inputs from the bar code scanner built into the YOUi system</span>
+</pre></div>
+</div>
+</section>
+<section id="choice-file">
+<h2>Choice File<a class="headerlink" href="#choice-file" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This file lets players choose A - D. Each option has the name of a file that players can move too.</p></li>
+<li><p>Each option is seperated by |</p></li>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">flower|run|head|grass</span></code></p></li>
+<li><p>Option “A” on the controler of flower, “B” is run, “C” is head, and “D” if grass</p></li>
+</ul>
+</section>
+<section id="answer-file">
+<h2>Answer File<a class="headerlink" href="#answer-file" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This file allows you to ask a question with a correct answere</p></li>
+<li><p>The file extention is .answer</p></li>
+<li><p>The files objects are seperated by |</p></li>
+<li><p>First object is the letter of the correct answer</p></li>
+<li><p>Second is the time in seconds the player has to answer the question</p></li>
+<li><p>The third object is response to the players after time is up</p></li>
+<li><p>The fourth is the score the player will get if they get a correct answer</p></li>
+<li><p>The fith is the file name that the player will go to 15 seconds after the timer goes off</p></li>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">c|30|The</span> <span class="pre">correct</span> <span class="pre">answer</span> <span class="pre">is</span> <span class="pre">Providence|5|trailer</span></code></p></li>
+<li><p>The correct answere is c. The player has 30 seconds to answere. After time is up it it the screen reads “The correct answer is Providence”. The player scores 5 points if they get the correct answer. 15 seconds after the timer is over the player will be moved to the trialer file.</p></li>
+</ul>
+</section>
+<section id="puzzle-file">
+<h2>Puzzle File<a class="headerlink" href="#puzzle-file" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The file offers a puzzle mini game to your game</p></li>
+<li><p>The file extention is .puzzle</p></li>
+<li><p>Players will get the amount of time you specify to solve a puzzle. If they succeed they will go to one page, if they do not they will go to a diffrent page.</p></li>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">harvest.jpg|3|4|120|5|trailer|happy</span></code></p></li>
+<li><p>Int the example above The picture they will be sulving is “harvest.jpg”, The picture will be split into 3 rows and 4 columns. The player will have 120 seconds to complete the puzzle. If they win they will recieve 5 points and go on to file trailer. If they loose they do not recieve any points and go on to file happy.</p></li>
+<li><p>Each object in the file is seperated by |</p></li>
+</ul>
+</section>
+<section id="rand-file">
+<h2>Rand File<a class="headerlink" href="#rand-file" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This file allows for a random word, number, or phrase to be displayed on the screen</p></li>
+<li><p>The file extention is .rand</p></li>
+<li><p>The objects are seprated by |</p></li>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">test|hungrey|silly|Bob|Emmy|Maadie|Adam</span></code></p></li>
+<li><p>At random it will chose an object like Bob</p></li>
+</ul>
+</section>
+<section id="next-file">
+<h2>Next File<a class="headerlink" href="#next-file" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The next file indicates ware the player will go at the end of a video or audio piece</p></li>
+<li><p>The file extention is .next</p></li>
+<li><p>This file can only be used inconjunction with a video or music file</p></li>
+<li><p>This file contains only a single file name</p></li>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">trailer</span></code></p></li>
+<li><p>In the example above at the end of the video the player will be taken to the trailer file</p></li>
+</ul>
+</section>
+<section id="magic-spells">
+<h2>Magic Spells<a class="headerlink" href="#magic-spells" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>You can refer to a file name you want the player to have the option to go to</p></li>
+<li><p>Players can type the file name in the “Magic Spell” sectionof there controller and it will take them to that file</p></li>
+</ul>
+</section>
+<section id="the-index-files">
+<h2>The Index Files<a class="headerlink" href="#the-index-files" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The index filename tells the system that this is the entry point of your game.</p></li>
+</ul>
+<p>NOW GO AND MAKE YOR GAME!
+Also check out some of the great dev tools provided.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">YOUi</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">File Based Games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#text-file">Text File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#picture-file">Picture File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#music-file">Music File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#video-file">Video File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#html-file">HTML File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#choice-file">Choice File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#answer-file">Answer File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#puzzle-file">Puzzle File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rand-file">Rand File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-file">Next File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magic-spells">Magic Spells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-index-files">The Index Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="direct_games.html">Direct Games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standard_games.html">Standard Games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movies.html">Movies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio_playlists.html">Audio Playlists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_tools.html">Dev Tools</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to YOUi Dev’s documentation!</a></li>
+      <li>Next: <a href="direct_games.html" title="next chapter">Direct Games</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2024, Adam W. Telford.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/file_games.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
