@@ -121,11 +121,11 @@ monogatari.script ({
 				'Dialog': 's How may I help you?',
 				'play': {
 					'Text': 'I want to play the game of the day.',
-					'Do': 'jump screen'
+					'Do': 'jump play'
 				},
 				'movie': {
 					'Text': 'Would you watch a movie with me.',
-					'Do': 'jump controller'
+					'Do': 'jump movie'
 				},
 				'about': {
 					'Text': 'I am so confused!',
