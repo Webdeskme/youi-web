@@ -189,7 +189,7 @@ function create ()
 	play.setInteractive({ useHandCursor: true  } );
 	this.physics.add.overlap(player, play, cplay, null, this);
 	play.on('pointerdown', () => {
-		//window.location.href = "about.html";
+		window.location.href = "control/index.html";
 	});
     games = this.physics.add.image(600, 450, 'games').setScale(1);
     games.body.allowGravity = false;
@@ -339,7 +339,7 @@ function cabout (player, about)
 function cplay (player, play)
 {	
 	play.disableBody(true, true);
-    //window.location.href = "about.html";
+    window.location.href = "control/index.html";
 }
 function cgames (player, games)
 {	
