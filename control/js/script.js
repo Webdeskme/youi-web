@@ -107,7 +107,7 @@ monogatari.characters ({
 monogatari.script ({
 	// The game starts here.
 	'Start': [
-		'Y Where am I?',
+		'y Where am I?',
 		"play sound sing",
 		'show scene out with fadeIn',
 		's Lalalalala!',
@@ -136,12 +136,12 @@ monogatari.script ({
 	],
 
 	'play': [
-		's <a href="/s.html" class="btn"">Of course! Your wish is my comand. Click here to go.</a><!--<button class="btn btn-lg btn-dark" onclick="screen()">Screen</button>-->',
+		's <a href="/games/pp/index.html" class="btn"">Of course! Your wish is my comand. Click here to go.</a><!--<button class="btn btn-lg btn-dark" onclick="screen()">Screen</button>-->',
 	],
 
 	'movie': [
 
-		's <a href="/c.html" class="btn"">I am here to serve. Click here to go.</a><!--<button class="btn btn-lg btn-dark" onclick="control()">Controller</button>-->'
+		's <a href="https://ia804708.us.archive.org/35/items/CaminandesLlamigos/Caminandes_%20Llamigos-1080p.mp4" class="btn"">I am here to serve. Click here to go.</a><!--<button class="btn btn-lg btn-dark" onclick="control()">Controller</button>-->'
 	],
 	
 	'about': [
