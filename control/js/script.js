@@ -136,7 +136,7 @@ monogatari.script ({
 	],
 
 	'play': [
-		's <a href="/games/pp/index.html" class="btn"">Of course! Your wish is my comand. Click here to go.</a><!--<button class="btn btn-lg btn-dark" onclick="screen()">Screen</button>-->',
+		's <a href="https://pp.webdesk.me/game/" class="btn"">Of course! Your wish is my comand. Click here to go.</a><!--<button class="btn btn-lg btn-dark" onclick="screen()">Screen</button>-->',
 	],
 
 	'movie': [

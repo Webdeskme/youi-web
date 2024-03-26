@@ -64,6 +64,7 @@ function preload ()
 	this.load.image('disclaimer', 'assets/disclaimer.png');
 	this.load.image('play', 'assets/play.png');
 	this.load.image('games', 'assets/games.png');
+	this.load.image('terminal', 'assets/terminal.jpg');
     //this.load.plugin('DialogModalPlugin', './dialog_plugin.js', true);
     //this.plugins.install('DialogModalPlugin', './dialog_plugin.js');
 }
@@ -159,6 +160,11 @@ function create ()
 	ra = this.add.image(50, 570, 'ra').setScale(0.2);
     la = this.add.image(150, 570, 'la').setScale(0.2);
     ab = this.add.image(750, 570, 'ab').setScale(0.15);
+    terminal = this.add.image(660, 570, 'terminal').setScale(0.1);
+    terminal.on('pointerdown', () => {
+		window.location.href = "terminal.html";
+	});
+    terminal.setInteractive({ useHandCursor: true  } );
     privacy = this.add.image(300, 570, 'privacy').setScale(0.5);
     terms = this.add.image(410, 570, 'terms').setScale(0.5);
     disclaimer = this.add.image(550, 570, 'disclaimer').setScale(0.5);
