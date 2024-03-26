@@ -1,20 +1,18 @@
 $('body').terminal({
-    /*cat: function(width = 200, height = 300) {
-        return $(`<img src="https://placekitten.com/${width}/${height}">`);
-    },
-    title: function() {
-        return fetch('https://terminal.jcubic.pl')
-            .then(r => r.text())
-            .then(html => html.match(/<title>([^>]+)<\/title>/)[1]);
-    },*/
     ls: function() {
-        this.echo('about\ngames\nplaygames\nplaymovie\ndevdocs\nprivacy\nterms\ndisclaimer');
+        this.echo('home\nabout\ngames\nplay\ndevdocs\nprivacy\nterms\ndisclaimer');
+    },
+    home: function() {
+        window.location.href = "index.html";
     },
     about: function() {
         window.location.href = "about.html";
     },
     games: function() {
         window.location.href = "blog/output/index.html";
+    },
+    play: function() {
+        window.location.href = "control/index.html";
     },
     privacy: function() {
         window.location.href = "privacy.html";

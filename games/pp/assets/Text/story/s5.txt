@@ -1,2 +1,0 @@
-Server integrity is reading at 50% health. The task manager is showing that proccessor and memory are working at full capacity.
-
