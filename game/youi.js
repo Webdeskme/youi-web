@@ -100,3 +100,4 @@ socket.on('ctrl', (msg) => {
 		//em_powerv = 1;
 		location.reload();
 	}
+});
