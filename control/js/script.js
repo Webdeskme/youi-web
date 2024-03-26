@@ -26,7 +26,7 @@ monogatari.action ('message').messages ({
 monogatari.action ('notification').notifications ({
 	'Welcome': {
 		title: 'Welcome',
-		body: 'This is the Monogatari VN Engine',
+		body: 'To WebDesk.me',
 		icon: ''
 	}
 });
@@ -123,8 +123,8 @@ monogatari.script ({
 					'Text': 'I want to play the game of the day.',
 					'Do': 'jump play'
 				},
-				'movie': {
-					'Text': 'Would you watch a movie with me.',
+				'stram': {
+					'Text': 'Would you watch a something with me.',
 					'Do': 'jump movie'
 				},
 				'about': {
@@ -136,12 +136,12 @@ monogatari.script ({
 	],
 
 	'play': [
-		's <a href="https://pp.webdesk.me/game/" class="btn"">Of course! Your wish is my comand. Click here to go.</a><!--<button class="btn btn-lg btn-dark" onclick="screen()">Screen</button>-->',
+		's <a href="/game.html" class="btn"">Of course! Your wish is my comand. Click here to go.</a><!--<button class="btn btn-lg btn-dark" onclick="screen()">Screen</button>-->',
 	],
 
-	'movie': [
+	'stream': [
 
-		's <a href="https://ia804708.us.archive.org/35/items/CaminandesLlamigos/Caminandes_%20Llamigos-1080p.mp4" class="btn"">I am here to serve. Click here to go.</a><!--<button class="btn btn-lg btn-dark" onclick="control()">Controller</button>-->'
+		's <a href="/stream.html" class="btn"">I am here to serve. Click here to go.</a><!--<button class="btn btn-lg btn-dark" onclick="control()">Controller</button>-->'
 	],
 	
 	'about': [

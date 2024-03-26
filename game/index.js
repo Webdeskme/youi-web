@@ -1,4 +1,4 @@
-var config = {
+/*var config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
@@ -223,3 +223,4 @@ function hitBomb (player, bomb)
 
     gameOver = true;
 }
+*/
