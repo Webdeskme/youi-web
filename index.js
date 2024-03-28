@@ -193,7 +193,7 @@ function create ()
 		window.location.href = "disclamer.html";
 	});
 	events.on('pointerdown', () => {
-		window.location.href = "knockout/dist/index.html";
+		window.location.href = "knockout/di/index.html";
 	});
 	store.on('pointerdown', () => {
 		window.location.href = "https://www.buymeacoffee.com/webdeskme";
