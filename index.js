@@ -174,7 +174,7 @@ function create ()
     terms = this.add.image(410, 585, 'terms').setScale(0.5);
     disclaimer = this.add.image(550, 585, 'disclaimer').setScale(0.5);
     events = this.add.image(350, 550, 'events').setScale(0.5);
-    terms = this.add.image(500, 550, 'store').setScale(0.5);
+    store = this.add.image(500, 550, 'store').setScale(0.5);
     ra.setInteractive({ useHandCursor: true  } );
 	la.setInteractive({ useHandCursor: true  } );
 	ab.setInteractive({ useHandCursor: true  } );
