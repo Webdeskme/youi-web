@@ -170,9 +170,9 @@ function create ()
     //privacy = this.add.image(300, 570, 'privacy').setScale(0.5);
     //terms = this.add.image(410, 570, 'terms').setScale(0.5);
     //disclaimer = this.add.image(550, 570, 'disclaimer').setScale(0.5);
-    privacy = this.add.image(300, 600, 'privacy').setScale(0.5);
-    terms = this.add.image(410, 600, 'terms').setScale(0.5);
-    disclaimer = this.add.image(550, 600, 'disclaimer').setScale(0.5);
+    privacy = this.add.image(300, 585, 'privacy').setScale(0.5);
+    terms = this.add.image(410, 585, 'terms').setScale(0.5);
+    disclaimer = this.add.image(550, 585, 'disclaimer').setScale(0.5);
     events = this.add.image(350, 550, 'events').setScale(0.5);
     terms = this.add.image(500, 550, 'store').setScale(0.5);
     ra.setInteractive({ useHandCursor: true  } );
