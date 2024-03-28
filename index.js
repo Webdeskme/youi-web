@@ -65,6 +65,8 @@ function preload ()
 	this.load.image('play', 'assets/play.png');
 	this.load.image('games', 'assets/games.png');
 	this.load.image('terminal', 'assets/terminal.jpg');
+	this.load.image('events', 'assets/events.png');
+	this.load.image('store', 'assets/store.png');
     //this.load.plugin('DialogModalPlugin', './dialog_plugin.js', true);
     //this.plugins.install('DialogModalPlugin', './dialog_plugin.js');
 }
@@ -165,15 +167,22 @@ function create ()
 		window.location.href = "terminal.html";
 	});
     terminal.setInteractive({ useHandCursor: true  } );
-    privacy = this.add.image(300, 570, 'privacy').setScale(0.5);
-    terms = this.add.image(410, 570, 'terms').setScale(0.5);
-    disclaimer = this.add.image(550, 570, 'disclaimer').setScale(0.5);
+    //privacy = this.add.image(300, 570, 'privacy').setScale(0.5);
+    //terms = this.add.image(410, 570, 'terms').setScale(0.5);
+    //disclaimer = this.add.image(550, 570, 'disclaimer').setScale(0.5);
+    privacy = this.add.image(300, 600, 'privacy').setScale(0.5);
+    terms = this.add.image(410, 600, 'terms').setScale(0.5);
+    disclaimer = this.add.image(550, 600, 'disclaimer').setScale(0.5);
+    events = this.add.image(350, 550, 'events').setScale(0.5);
+    terms = this.add.image(500, 550, 'store').setScale(0.5);
     ra.setInteractive({ useHandCursor: true  } );
 	la.setInteractive({ useHandCursor: true  } );
 	ab.setInteractive({ useHandCursor: true  } );
 	privacy.setInteractive({ useHandCursor: true  } );
 	terms.setInteractive({ useHandCursor: true  } );
 	disclaimer.setInteractive({ useHandCursor: true  } );
+	events.setInteractive({ useHandCursor: true  } );
+	store.setInteractive({ useHandCursor: true  } );
 	privacy.on('pointerdown', () => {
 		window.location.href = "privacy.html";
 	});
