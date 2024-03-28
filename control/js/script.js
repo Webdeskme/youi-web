@@ -256,7 +256,7 @@ monogatari.script ({
 			}
 		},
 		
-    ]
+    ],
     'Howells': [
 		//'stop music nrmal',
 		'play sound rain',
