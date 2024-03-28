@@ -121,7 +121,7 @@ monogatari.script ({
         'show character s normal at left with fadeIn',
         'play sound throat',
 		's Sorry I did not notice you there. How unprofessional of me. My apologies.',
-		'jump star2'
+		'jump start2'
 	],
 	"start2": [
 		{
