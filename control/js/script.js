@@ -187,7 +187,7 @@ monogatari.script ({
         'jump youi2'
         ],
       'youi2': [
-        's So you want to know what YOUi is hmm?'
+        's So you want to know what YOUi is hmm?',
         'play sound hmm',
         's Well YOUi is the magical portal you went through to get here.',
         's I am its gate keeper',

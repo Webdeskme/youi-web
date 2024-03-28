@@ -192,6 +192,12 @@ function create ()
 	disclaimer.on('pointerdown', () => {
 		window.location.href = "disclamer.html";
 	});
+	events.on('pointerdown', () => {
+		window.location.href = "knockout/dist/index.html";
+	});
+	store.on('pointerdown', () => {
+		window.location.href = "https://www.buymeacoffee.com/webdeskme";
+	});
 	about = this.physics.add.image(120, 300, 'about').setScale(1);
 	about.body.allowGravity = false;
 	about.setInteractive({ useHandCursor: true  } );
