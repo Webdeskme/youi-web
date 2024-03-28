@@ -121,6 +121,9 @@ monogatari.script ({
         'show character s normal at left with fadeIn',
         'play sound throat',
 		's Sorry I did not notice you there. How unprofessional of me. My apologies.',
+		'jump star2'
+	],
+	"start2": [
 		{
 			'Choice': {
 				'Dialog': 's How may I help you?',
@@ -172,15 +175,18 @@ monogatari.script ({
 		
 	],
     'youi': [
-		'stop music nrmal',
+		//'stop music normal',
 		'play sound rain',
         's Sure, but lets get inside. It is starting to rain.',
         'show scene in with fadeIn',
         'show character s right at right with fadeIn',
-        'play music in with loop',
+        //'play music in with loop',
         's Have a seat. It is so nice to have someone sit down and take an intrest.',
         's Here dry off by the fire.',
         'y Thank you!',
+        'jump youi2'
+        ],
+      'youi2': [
         's So you want to know what YOUi is hmm?',
         's Well YOUi is the magical portal you went through to get here.',
         's I am its get keeper',
@@ -189,41 +195,104 @@ monogatari.script ({
         {
 			'Choice': {
 				'Dialog': 's I think in time you will call this land your home.',
-				'explore': {
+				'explore1': {
 					'Text': 'I am ready to explore.',
-					'Do': 'jump youi'
+					'Do': 'jump start2'
 				},
-				'land': {
+				'land1': {
 					'Text': 'What is this place?',
-					'Do': 'jump land'
+					'Do': 'jump land2'
 				},
-				'howells': {
+				'howells1': {
 					'Text': 'I want to know more about you.',
-					'Do': 'jump Howells'
+					'Do': 'jump Howells2'
 				}
 			}
 		},
     ],
     'land': [
-		'stop music nrmal',
+		//'stop music normal',
 		'play sound rain',
 		's Sure, but lets get inside. It is starting to rain.',
 		'show scene in with fadeIn',
 		'show character s right at right with fadeIn',
-		'play music in with loop',
+		//'play music in with loop',
 		's Have a seat. It is so nice to have someone sit down and take an intrest.',
 		's Here dry off by the fire.',
         'y Thank you!',
+        'jump land2'
     ],
+    "land2": [
+		's You are now at the boarder of Wonderland and Maybeland.',
+		'y Which side of the boarder am I on?',
+		's This is Maybeland and you have just entered the kingdom of the Inkaboohs overlooking the great root beer ocean.',
+		'y Inkaboohs? Who are they?',
+		's It is said that the first Inkabooh was one of the Queen of Hearts card soldiers.',
+		's He was diffrent fron the rest.',
+		'y How was he diffrent?',
+		's He had know suit or value, just an inksplotch on his belly.',
+		's The queen hated him and sentenced him to be beheaded, but Inkabooh ran away to the great Dice Tower', 
+		's The Queen tryied to get to him but the citeizens of Dice Town defended him.',
+		's Inkabooh descoverd that he was actually not a real card guard at all, but came from a diffrent race of cards call the Senary',
+		'y Did Inkabooh go back to live with his own people?',
+		's He tried, but could never feel at home so the king of the Great Dice Tower gave him this land to be a place to build a kingdom for cards that just dont fit in. They call themselves blaughters.',
+		'y And this land was named after Inkabooh?',
+		's Exactly! Ikabooh became king Blatoter the first.',
+		{
+			'Choice': {
+				'Dialog': 'y Thank you for inviting me in.',
+				'explore2': {
+					'Text': 'I am ready to explore.',
+					'Do': 'jump start2'
+				},
+				'land2': {
+					'Text': 'Tell me, what is YOUi?',
+					'Do': 'jump youi2'
+				},
+				'howells2': {
+					'Text': 'I want to know more about you.',
+					'Do': 'jump Howells2'
+				}
+			}
+		},
+		
+    ]
     'Howells': [
-		'stop music nrmal',
+		//'stop music nrmal',
 		'play sound rain',
 		's Sure, but lets get inside. It is starting to rain.',
 		'show scene in with fadeIn',
 		'show character s right at right with fadeIn',
-		'play music in with loop',
+		//'play music in with loop',
 		's Have a seat. It is so nice to have someone sit down and take an intrest.',
 		's Here dry off by the fire.',
         'y Thank you!',
-    ]
+        'jump Howells2'
+    ],
+    "Howells2": [
+		's So you want to know who I am?',
+		'y Yes!',
+		's I am the gate keeper.',
+		's I decide who is allowed into this great land.',
+		'y Decide?',
+		"s Well yes. There are enough unsavory creatures in this land. We don't want to let in just anyone. We only want people and creatures who will add value to our comunities.",
+		'y How did you get this job. King Blater the second asked me too. He thinks I am a good judge of carecter and I did not argue with his so he did not think he was a bad judge of charecter.',
+		{
+			'Choice': {
+				'Dialog': 'y Thank you for telling me a little about you.',
+				'explore3': {
+					'Text': 'I am ready to explore.',
+					'Do': 'jump start2'
+				},
+				'land3': {
+					'Text': 'What is this place?',
+					'Do': 'jump land2'
+				},
+				'howells3': {
+					'Text': 'I want to know more about you.',
+					'Do': 'jump Howells2'
+				}
+			}
+		},
+	]
 });
