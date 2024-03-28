@@ -27,7 +27,7 @@ monogatari.action ('notification').notifications ({
 	'Welcome': {
 		title: 'Welcome',
 		body: 'To WebDesk.me',
-		icon: ''
+		icon: 'favicon.ico'
 	}
 });
 
@@ -57,7 +57,8 @@ monogatari.assets ('gallery', {
 
 // Define the music used in the game.
 monogatari.assets ('music', {
-	"normal": "playing-in-color-120336.mp3"
+	"normal": "playing-in-color-120336.mp3",
+	"in": "sinnesloschen-beam.mp3"
 });
 
 // Define the voice files used in the game.
@@ -70,6 +71,9 @@ monogatari.assets ('sounds', {
 	"door": "door-opening-and-closing-18398.mp3",
 	"throat": "clearing-throat-94613.mp3",
 	"sing": "disanfins-33882.mp3",
+	"rain": "rain-and-thunder.mp3",
+	"hmm": "hmmmm.mp3",
+	"ohemm": "onehmm.mp3"
 });
 
 // Define the videos used in the game.
@@ -96,6 +100,7 @@ monogatari.characters ({
 		color: '#5bcaff',
 		sprites: {
 			normal: 'soldier.png',
+			right: 'soldier2.png',
 			}
 	},
 	'y': {
@@ -150,15 +155,15 @@ monogatari.script ({
 		{
 			'Choice': {
 				'Dialog': 's What are you confused about?',
-				'screen': {
+				'youi': {
 					'Text': 'Tell me about YOUi. What is it?',
 					'Do': 'jump youi'
 				},
-				'controller': {
+				'land': {
 					'Text': 'How did I get here? What is this place?',
 					'Do': 'jump land'
 				},
-				'about': {
+				'howells': {
 					'Text': 'I want to know more about you.',
 					'Do': 'jump Howells'
 				}
@@ -167,12 +172,58 @@ monogatari.script ({
 		
 	],
     'youi': [
-        's Sure, but if we are going to have a longer conversation come inside and relax.'
+		'stop music nrmal',
+		'play sound rain',
+        's Sure, but lets get inside. It is starting to rain.',
+        'show scene in with fadeIn',
+        'show character s right at right with fadeIn',
+        'play music in with loop',
+        's Have a seat. It is so nice to have someone sit down and take an intrest.',
+        's Here dry off by the fire.',
+        'y Thank you!',
+        's So you want to know what YOUi is hmm?',
+        's Well YOUi is the magical portal you went through to get here.',
+        's I am its get keeper',
+        's You seem like a really nice person, so anytime you want to visit you just come through the portal and I will direct you were you want to go.',
+        'y That is very kind.',
+        {
+			'Choice': {
+				'Dialog': 's I think in time you will call this land your home.',
+				'explore': {
+					'Text': 'I am ready to explore.',
+					'Do': 'jump youi'
+				},
+				'land': {
+					'Text': 'What is this place?',
+					'Do': 'jump land'
+				},
+				'howells': {
+					'Text': 'I want to know more about you.',
+					'Do': 'jump Howells'
+				}
+			}
+		},
     ],
     'land': [
-
+		'stop music nrmal',
+		'play sound rain',
+		's Sure, but lets get inside. It is starting to rain.',
+		'show scene in with fadeIn',
+		'show character s right at right with fadeIn',
+		'play music in with loop',
+		's Have a seat. It is so nice to have someone sit down and take an intrest.',
+		's Here dry off by the fire.',
+        'y Thank you!',
     ],
     'Howells': [
-
+		'stop music nrmal',
+		'play sound rain',
+		's Sure, but lets get inside. It is starting to rain.',
+		'show scene in with fadeIn',
+		'show character s right at right with fadeIn',
+		'play music in with loop',
+		's Have a seat. It is so nice to have someone sit down and take an intrest.',
+		's Here dry off by the fire.',
+        'y Thank you!',
     ]
 });
