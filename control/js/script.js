@@ -131,9 +131,9 @@ monogatari.script ({
 					'Text': 'I want to play the game of the day.',
 					'Do': 'jump play'
 				},
-				'stram': {
+				'movie': {
 					'Text': 'Would you watch a something with me.',
-					'Do': 'jump movie'
+					'Do': 'jump stream'
 				},
 				'about': {
 					'Text': 'I am so confused!',
@@ -187,9 +187,10 @@ monogatari.script ({
         'jump youi2'
         ],
       'youi2': [
-        's So you want to know what YOUi is hmm?',
+        's So you want to know what YOUi is hmm?'
+        'play sound hmm',
         's Well YOUi is the magical portal you went through to get here.',
-        's I am its get keeper',
+        's I am its gate keeper',
         's You seem like a really nice person, so anytime you want to visit you just come through the portal and I will direct you were you want to go.',
         'y That is very kind.',
         {
@@ -228,6 +229,7 @@ monogatari.script ({
 		's This is Maybeland and you have just entered the kingdom of the Inkaboohs overlooking the great root beer ocean.',
 		'y Inkaboohs? Who are they?',
 		's It is said that the first Inkabooh was one of the Queen of Hearts card soldiers.',
+		'play sound hmm',
 		's He was diffrent fron the rest.',
 		'y How was he diffrent?',
 		's He had know suit or value, just an inksplotch on his belly.',
@@ -235,9 +237,9 @@ monogatari.script ({
 		's The Queen tryied to get to him but the citeizens of Dice Town defended him.',
 		's Inkabooh descoverd that he was actually not a real card guard at all, but came from a diffrent race of cards call the Senary',
 		'y Did Inkabooh go back to live with his own people?',
-		's He tried, but could never feel at home so the king of the Great Dice Tower gave him this land to be a place to build a kingdom for cards that just dont fit in. They call themselves blaughters.',
+		"s He tried, but could never feel at home so the king of the Great Dice Tower gave him this land to be a place to build a kingdom for cards that just don't fit in. They call themselves blaughters.",
 		'y And this land was named after Inkabooh?',
-		's Exactly! Ikabooh became king Blatoter the first.',
+		's Exactly! Inkabooh became king Blatoter the first.',
 		{
 			'Choice': {
 				'Dialog': 'y Thank you for inviting me in.',
@@ -272,11 +274,13 @@ monogatari.script ({
     "Howells2": [
 		's So you want to know who I am?',
 		'y Yes!',
+		'play sound hmm',
 		's I am the gate keeper.',
 		's I decide who is allowed into this great land.',
 		'y Decide?',
 		"s Well yes. There are enough unsavory creatures in this land. We don't want to let in just anyone. We only want people and creatures who will add value to our comunities.",
-		'y How did you get this job. King Blater the second asked me too. He thinks I am a good judge of carecter and I did not argue with his so he did not think he was a bad judge of charecter.',
+		'y How did you get this job?',
+		's King Blater the second asked me too. He thinks I am a good judge of carecter and I did not argue with his so he did not think he was a bad judge of charecter.',
 		{
 			'Choice': {
 				'Dialog': 'y Thank you for telling me a little about you.',
