@@ -67,6 +67,7 @@ function preload ()
 	this.load.image('terminal', 'assets/terminal.jpg');
 	this.load.image('events', 'assets/events.png');
 	this.load.image('store', 'assets/store.png');
+	this.load.image('lock', 'assets/lock.png');
     //this.load.plugin('DialogModalPlugin', './dialog_plugin.js', true);
     //this.plugins.install('DialogModalPlugin', './dialog_plugin.js');
 }
@@ -175,6 +176,7 @@ function create ()
     disclaimer = this.add.image(550, 585, 'disclaimer').setScale(0.5);
     events = this.add.image(350, 550, 'events').setScale(0.5);
     store = this.add.image(500, 550, 'store').setScale(0.5);
+    lock = this.add.image(440, 550, 'lock').setScale(0.5);
     ra.setInteractive({ useHandCursor: true  } );
 	la.setInteractive({ useHandCursor: true  } );
 	ab.setInteractive({ useHandCursor: true  } );
@@ -183,6 +185,7 @@ function create ()
 	disclaimer.setInteractive({ useHandCursor: true  } );
 	events.setInteractive({ useHandCursor: true  } );
 	store.setInteractive({ useHandCursor: true  } );
+	lock.setInteractive({ useHandCursor: true  } );
 	privacy.on('pointerdown', () => {
 		window.location.href = "privacy.html";
 	});
@@ -197,6 +200,9 @@ function create ()
 	});
 	store.on('pointerdown', () => {
 		window.location.href = "https://www.buymeacoffee.com/webdeskme";
+	});
+	lock.on('pointerdown', () => {
+		window.location.href = "affinerail/index.html";
 	});
 	about = this.physics.add.image(120, 300, 'about').setScale(1);
 	about.body.allowGravity = false;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AffineRail</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="affine.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script language="javascript" src="crypto-js/crypto-js.js"></script>
+    <script language="javascript" src="lz-string/libs/lz-string.js"></script>
+  </head>
+  <body>
+        <h1>AffineRail:</h1>
+        <label for="key">Key:</label>
+        <input id="key" placeholder="Key: lowercase and numbers." value="Key2468" class="form-control">
+        <br>
+        <label id="input" for="text">Input:</label>
+        <textarea id="text" width="100%" rows="9" class="form-control" autofocus>This is some sample text.</textarea>
+        <div id="btnlist">
+			<button onclick="en()" class="btn btn-dark">Encrypt</button> <button onclick="de()" class="btn btn-dark">Decrypt</button><!-- <button class="btn btn-dark" onclick="download1()">Download txt</button>-->
+        </div>
+        <label id="output" for="code">Output:</label>
+        <textarea id="code" width="100%" rows="9" class="form-control" disabled></textarea>
+        <label for="qrcode">QRcode:</label>
+        <div id="qrcode"></div>
+        <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="qrcodejs/qrcode.min.js"></script>
+        <script src="affine.js"></script>
+  </body>
+</html>
