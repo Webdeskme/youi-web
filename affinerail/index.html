@@ -13,17 +13,17 @@
   </head>
   <body>
         <h1>AffineRail:</h1>
-        <label for="key">Key:</label>
+        <label for="key">Key: (Allows for letters numbers and "." and "_")</label>
         <input id="key" placeholder="Key: lowercase and numbers." value="Key2468" class="form-control">
         <br>
-        <label id="input" for="text">Input:</label>
+        <label id="input" for="text">Input:(Plain text will convert to lowercase with spaces and periods.)</label>
         <textarea id="text" width="100%" rows="9" class="form-control" autofocus>This is some sample text.</textarea>
         <div id="btnlist">
-			<button onclick="en()" class="btn btn-dark">Encrypt</button> <button onclick="de()" class="btn btn-dark">Decrypt</button><!-- <button class="btn btn-dark" onclick="download1()">Download txt</button>-->
+			<button onclick="en()" class="btn btn-dark">Encrypt</button> <button onclick="de()" class="btn btn-dark">Decrypt</button>
         </div>
-        <label id="output" for="code">Output:</label>
+        <label id="output" for="code">Output: <b>Warning: </b>This program is ment for enternment not real encryption. It offers some file compression and encryption using classical cyphers that can be cracked by a proffetional.</label>
         <textarea id="code" width="100%" rows="9" class="form-control" disabled></textarea>
-        <label for="qrcode">QRcode:</label>
+        <label for="qrcode">QRcode: (Easily share with friends in person.)</label>
         <div id="qrcode"></div>
         <script src="bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="qrcodejs/qrcode.min.js"></script>
