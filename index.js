@@ -176,7 +176,7 @@ function create ()
     disclaimer = this.add.image(550, 585, 'disclaimer').setScale(0.5);
     events = this.add.image(350, 550, 'events').setScale(0.5);
     store = this.add.image(500, 550, 'store').setScale(0.5);
-    lock = this.add.image(440, 550, 'lock').setScale(0.1);
+    lock = this.add.image(430, 550, 'lock').setScale(0.05);
     ra.setInteractive({ useHandCursor: true  } );
 	la.setInteractive({ useHandCursor: true  } );
 	ab.setInteractive({ useHandCursor: true  } );
