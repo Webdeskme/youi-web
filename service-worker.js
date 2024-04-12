@@ -28,7 +28,6 @@ const URLS = [
   `${GHPATH}/assets/privacy.png`,
   `${GHPATH}/assets/terms.png`,
   `${GHPATH}/assets/disclaimer.png`,
-  `${GHPATH}/assets/games.png`,
   `${GHPATH}/assets/terminal.jpg`,
   `${GHPATH}/assets/events.png`,
   `${GHPATH}/assets/store.png`,

@@ -63,7 +63,7 @@ function preload ()
 	this.load.image('terms', 'assets/terms.png');
 	this.load.image('disclaimer', 'assets/disclaimer.png');
 	//this.load.image('play', 'assets/play.png');
-	this.load.image('games', 'assets/games.png');
+	//this.load.image('games', 'assets/games.png');
 	this.load.image('terminal', 'assets/terminal.jpg');
 	this.load.image('events', 'assets/events.png');
 	this.load.image('store', 'assets/store.png');
