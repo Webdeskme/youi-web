@@ -1,4 +1,4 @@
-const GHPATH = 'https://www.webdesk.me/';
+const GHPATH = 'https://www.webdesk.me';
 // Change to a different app prefix name
 const APP_PREFIX = 'webdesk_me_';
 const VERSION = 'version_000001';
