@@ -1,7 +1,7 @@
 const GHPATH = 'https://www.webdesk.me/';
 // Change to a different app prefix name
 const APP_PREFIX = 'webdesk_me_';
-const VERSION = 'version_000000';
+const VERSION = 'version_000001';
 
 // The files to make available for offline use. make sure to add 
 // others to this list
