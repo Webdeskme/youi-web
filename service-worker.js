@@ -16,7 +16,7 @@ const URLS = [
   `${GHPATH}/assets/star.png`,
   `${GHPATH}/assets/bomb.png`,
   `${GHPATH}/assets/dude.png`,
-  `${GHPATH}/tropical-summer-music-112842.mp3`,
+  `${GHPATH}/assets/tropical-summer-music-112842.mp3`,
   `${GHPATH}/assets/collectcoin.mp3`,
   `${GHPATH}/assets/ra.png`,
   `${GHPATH}/assets/la.png`,
@@ -38,7 +38,7 @@ const URLS = [
    ${GHPATH}/reveal.js-master/di/reset.css`,
   `${GHPATH}/reveal.js-master/di/reveal.css`,
   `${GHPATH}/reveal.js-master/di/theme/black.css`,
-  `${GHPATH}/plugin/highlight/monokai.css`,
+  `${GHPATH}/reveal.js-master/plugin/highlight/monokai.css`,
   `${GHPATH}/reveal.js-master/di/reveal.js`,
   `${GHPATH}/reveal.js-master/plugin/notes/notes.js`,
   `${GHPATH}/reveal.js-master/plugin/markdown/markdown.js`,
@@ -77,11 +77,11 @@ self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       console.log('Installing cache : ' + CACHE_NAME);
-      const stack = [];
+      /*const stack = [];
     URLS.forEach(file => stack.push(
         cache.add(file).catch(_=>console.error(`can't load ${file} to cache`))
-    ));
-      //return cache.addAll(URLS)
+    ));*/
+      return cache.addAll(URLS)
     })
   )
 })
