@@ -1,7 +1,7 @@
 const GHPATH = 'https://www.webdesk.me';
 // Change to a different app prefix name
 const APP_PREFIX = 'webdesk_me_';
-const VERSION = 'version_000000';
+const VERSION = 'version_000001';
 
 // The files to make available for offline use. make sure to add 
 // others to this list
@@ -32,6 +32,15 @@ const URLS = [
   `${GHPATH}/assets/events.png`,
   `${GHPATH}/assets/store.png`,
   `${GHPATH}/assets/lock.png`,
+  `${GHPATH}/assets/facebook.png`,
+  `${GHPATH}/assets/youtube.png`,
+  `${GHPATH}/assets/tumblr.png`,
+  `${GHPATH}/blog/output/index.html`,
+  `${GHPATH}/blog/output/theme/css/main.css`,
+  `${GHPATH}/blog/output/category/general.html`,
+  `${GHPATH}/blog/output/welcome.html`,
+  `${GHPATH}/blog/output/author/webdeskme.html`,
+  `${GHPATH}/blog/output/tag/general.html`,
   `${GHPATH}/PWA-enabled-brightgreen.svg`,
   `${GHPATH}/about.html`,`
    ${GHPATH}/reveal.js-master/di/reset.css`,
