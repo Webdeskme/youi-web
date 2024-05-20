@@ -373,3 +373,7 @@ function cgames (player, games)
 	games.disableBody(true, true);
     window.location.href = "blog/output/index.html";
 }
+this.socket = io('http://127.0.0.1:3333');
+this.socket.on('test', function (test) {
+	console.log(test);
+});
